@@ -12,6 +12,8 @@
 		ECC771AC2CE76BFF00420E03 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = ECC771AB2CE76BFF00420E03 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		ECC771AE2CE76BFF00420E03 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = ECC771AD2CE76BFF00420E03 /* FirebaseAppCheck */; };
 		ECC771B02CE76BFF00420E03 /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = ECC771AF2CE76BFF00420E03 /* FirebaseAppDistribution-Beta */; };
+		ECC771CF2CE78AB300420E03 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = ECC771CE2CE78AB300420E03 /* FirebaseAuth */; };
+		ECC771D12CE78AB300420E03 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = ECC771D02CE78AB300420E03 /* FirebaseCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +63,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECC771AE2CE76BFF00420E03 /* FirebaseAppCheck in Frameworks */,
+				ECC771CF2CE78AB300420E03 /* FirebaseAuth in Frameworks */,
 				ECC771A82CE76BFF00420E03 /* FirebaseAnalytics in Frameworks */,
 				ECC771B02CE76BFF00420E03 /* FirebaseAppDistribution-Beta in Frameworks */,
+				ECC771D12CE78AB300420E03 /* FirebaseCore in Frameworks */,
 				ECC771AC2CE76BFF00420E03 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				ECC771AA2CE76BFF00420E03 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 			);
@@ -130,6 +134,8 @@
 				ECC771AB2CE76BFF00420E03 /* FirebaseAnalyticsWithoutAdIdSupport */,
 				ECC771AD2CE76BFF00420E03 /* FirebaseAppCheck */,
 				ECC771AF2CE76BFF00420E03 /* FirebaseAppDistribution-Beta */,
+				ECC771CE2CE78AB300420E03 /* FirebaseAuth */,
+				ECC771D02CE78AB300420E03 /* FirebaseCore */,
 			);
 			productName = Authentification_iOS_app;
 			productReference = ECC771752CE76A5D00420E03 /* Authentification_iOS_app.app */;
@@ -616,6 +622,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = ECC771A62CE76BFF00420E03 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseAppDistribution-Beta";
+		};
+		ECC771CE2CE78AB300420E03 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECC771A62CE76BFF00420E03 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		ECC771D02CE78AB300420E03 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECC771A62CE76BFF00420E03 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
