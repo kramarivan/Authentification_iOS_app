@@ -8,7 +8,7 @@ import SwiftUI
 import FirebaseAuth
 
 struct LoginView: View {
-    @EnvironmentObject var firebaseAuth: FirebaseAuth
+    @EnvironmentObject var contentViewModel: ContentViewModel
     @StateObject private var loginViewModel = LoginViewModel()
 
         var body: some View {
@@ -31,7 +31,7 @@ struct LoginView: View {
                 Button("Login") {
                     loginViewModel.loginUser { success in
                         if success {
-                            firebaseAuth.isLoggedIn = true
+                            contentViewModel.isLoggedIn = true
                         }
                     }
                 }

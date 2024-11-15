@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var firebaseAuth = FirebaseAuth()
+    @StateObject private var viewModel = ContentViewModel()
 
     var body: some View {
-        if firebaseAuth.isLoggedIn {
+        if viewModel.isLoggedIn {
             ProtectedView()
-                .environmentObject(firebaseAuth)
+                .environmentObject(viewModel)
         } else {
             LoginView()
-                .environmentObject(firebaseAuth)
+                .environmentObject(viewModel)
         }
     }
 }

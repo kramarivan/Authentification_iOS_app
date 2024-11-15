@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct ProtectedView: View {
-    @EnvironmentObject var firebaseAuth: FirebaseAuth
+    @EnvironmentObject var contentViewModel: ContentViewModel
 
     var body: some View {
         VStack {
@@ -16,7 +16,7 @@ struct ProtectedView: View {
                 .padding()
 
             Button("Logout") {
-                firebaseAuth.signOut()
+                contentViewModel.signOut()
             }
             .padding()
         }
