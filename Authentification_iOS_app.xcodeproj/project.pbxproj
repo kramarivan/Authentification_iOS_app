@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		ECC771862CE76A6000420E03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECC7716D2CE76A5D00420E03 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECC771742CE76A5D00420E03;
+			remoteInfo = Authentification_iOS_app;
+		};
+		ECC771902CE76A6000420E03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECC7716D2CE76A5D00420E03 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECC771742CE76A5D00420E03;
+			remoteInfo = Authentification_iOS_app;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ECC771752CE76A5D00420E03 /* Authentification_iOS_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Authentification_iOS_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC771852CE76A6000420E03 /* Authentification_iOS_appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Authentification_iOS_appTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC7718F2CE76A6000420E03 /* Authentification_iOS_appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Authentification_iOS_appUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		ECC771772CE76A5D00420E03 /* Authentification_iOS_app */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Authentification_iOS_app;
+			sourceTree = "<group>";
+		};
+		ECC771882CE76A6000420E03 /* Authentification_iOS_appTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Authentification_iOS_appTests;
+			sourceTree = "<group>";
+		};
+		ECC771922CE76A6000420E03 /* Authentification_iOS_appUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Authentification_iOS_appUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ECC771722CE76A5D00420E03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC771822CE76A6000420E03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC7718C2CE76A6000420E03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ECC7716C2CE76A5D00420E03 = {
+			isa = PBXGroup;
+			children = (
+				ECC771772CE76A5D00420E03 /* Authentification_iOS_app */,
+				ECC771882CE76A6000420E03 /* Authentification_iOS_appTests */,
+				ECC771922CE76A6000420E03 /* Authentification_iOS_appUITests */,
+				ECC771762CE76A5D00420E03 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ECC771762CE76A5D00420E03 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ECC771752CE76A5D00420E03 /* Authentification_iOS_app.app */,
+				ECC771852CE76A6000420E03 /* Authentification_iOS_appTests.xctest */,
+				ECC7718F2CE76A6000420E03 /* Authentification_iOS_appUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ECC771742CE76A5D00420E03 /* Authentification_iOS_app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECC771992CE76A6000420E03 /* Build configuration list for PBXNativeTarget "Authentification_iOS_app" */;
+			buildPhases = (
+				ECC771712CE76A5D00420E03 /* Sources */,
+				ECC771722CE76A5D00420E03 /* Frameworks */,
+				ECC771732CE76A5D00420E03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				ECC771772CE76A5D00420E03 /* Authentification_iOS_app */,
+			);
+			name = Authentification_iOS_app;
+			packageProductDependencies = (
+			);
+			productName = Authentification_iOS_app;
+			productReference = ECC771752CE76A5D00420E03 /* Authentification_iOS_app.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ECC771842CE76A6000420E03 /* Authentification_iOS_appTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECC7719C2CE76A6000420E03 /* Build configuration list for PBXNativeTarget "Authentification_iOS_appTests" */;
+			buildPhases = (
+				ECC771812CE76A6000420E03 /* Sources */,
+				ECC771822CE76A6000420E03 /* Frameworks */,
+				ECC771832CE76A6000420E03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECC771872CE76A6000420E03 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				ECC771882CE76A6000420E03 /* Authentification_iOS_appTests */,
+			);
+			name = Authentification_iOS_appTests;
+			packageProductDependencies = (
+			);
+			productName = Authentification_iOS_appTests;
+			productReference = ECC771852CE76A6000420E03 /* Authentification_iOS_appTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ECC7718E2CE76A6000420E03 /* Authentification_iOS_appUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECC7719F2CE76A6000420E03 /* Build configuration list for PBXNativeTarget "Authentification_iOS_appUITests" */;
+			buildPhases = (
+				ECC7718B2CE76A6000420E03 /* Sources */,
+				ECC7718C2CE76A6000420E03 /* Frameworks */,
+				ECC7718D2CE76A6000420E03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECC771912CE76A6000420E03 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				ECC771922CE76A6000420E03 /* Authentification_iOS_appUITests */,
+			);
+			name = Authentification_iOS_appUITests;
+			packageProductDependencies = (
+			);
+			productName = Authentification_iOS_appUITests;
+			productReference = ECC7718F2CE76A6000420E03 /* Authentification_iOS_appUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ECC7716D2CE76A5D00420E03 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					ECC771742CE76A5D00420E03 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					ECC771842CE76A6000420E03 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = ECC771742CE76A5D00420E03;
+					};
+					ECC7718E2CE76A6000420E03 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = ECC771742CE76A5D00420E03;
+					};
+				};
+			};
+			buildConfigurationList = ECC771702CE76A5D00420E03 /* Build configuration list for PBXProject "Authentification_iOS_app" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ECC7716C2CE76A5D00420E03;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = ECC771762CE76A5D00420E03 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ECC771742CE76A5D00420E03 /* Authentification_iOS_app */,
+				ECC771842CE76A6000420E03 /* Authentification_iOS_appTests */,
+				ECC7718E2CE76A6000420E03 /* Authentification_iOS_appUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ECC771732CE76A5D00420E03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC771832CE76A6000420E03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC7718D2CE76A6000420E03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ECC771712CE76A5D00420E03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC771812CE76A6000420E03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC7718B2CE76A6000420E03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ECC771872CE76A6000420E03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECC771742CE76A5D00420E03 /* Authentification_iOS_app */;
+			targetProxy = ECC771862CE76A6000420E03 /* PBXContainerItemProxy */;
+		};
+		ECC771912CE76A6000420E03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECC771742CE76A5D00420E03 /* Authentification_iOS_app */;
+			targetProxy = ECC771902CE76A6000420E03 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		ECC771972CE76A6000420E03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ECC771982CE76A6000420E03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ECC7719A2CE76A6000420E03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Authentification_iOS_app/Preview Content\"";
+				DEVELOPMENT_TEAM = 5795BXZCGT;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "KramarCreations.Authentification-iOS-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ECC7719B2CE76A6000420E03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Authentification_iOS_app/Preview Content\"";
+				DEVELOPMENT_TEAM = 5795BXZCGT;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "KramarCreations.Authentification-iOS-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		ECC7719D2CE76A6000420E03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5795BXZCGT;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "KramarCreations.Authentification-iOS-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Authentification_iOS_app.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Authentification_iOS_app";
+			};
+			name = Debug;
+		};
+		ECC7719E2CE76A6000420E03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5795BXZCGT;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "KramarCreations.Authentification-iOS-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Authentification_iOS_app.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Authentification_iOS_app";
+			};
+			name = Release;
+		};
+		ECC771A02CE76A6000420E03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5795BXZCGT;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "KramarCreations.Authentification-iOS-appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Authentification_iOS_app;
+			};
+			name = Debug;
+		};
+		ECC771A12CE76A6000420E03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5795BXZCGT;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "KramarCreations.Authentification-iOS-appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Authentification_iOS_app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ECC771702CE76A5D00420E03 /* Build configuration list for PBXProject "Authentification_iOS_app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECC771972CE76A6000420E03 /* Debug */,
+				ECC771982CE76A6000420E03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECC771992CE76A6000420E03 /* Build configuration list for PBXNativeTarget "Authentification_iOS_app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECC7719A2CE76A6000420E03 /* Debug */,
+				ECC7719B2CE76A6000420E03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECC7719C2CE76A6000420E03 /* Build configuration list for PBXNativeTarget "Authentification_iOS_appTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECC7719D2CE76A6000420E03 /* Debug */,
+				ECC7719E2CE76A6000420E03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECC7719F2CE76A6000420E03 /* Build configuration list for PBXNativeTarget "Authentification_iOS_appUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECC771A02CE76A6000420E03 /* Debug */,
+				ECC771A12CE76A6000420E03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ECC7716D2CE76A5D00420E03 /* Project object */;
+}
