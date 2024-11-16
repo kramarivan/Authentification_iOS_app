@@ -12,18 +12,30 @@ struct RegisterView: View {
     
     var body: some View {
         VStack(spacing: 20){
-            TextField("Username", text: $registerViewModel.username)
+            TextField("Email", text: $registerViewModel.username)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .autocapitalization(.none)
                 .keyboardType(.emailAddress)
                 .padding(.horizontal)
-        
-        
-        SecureField("Password", text: $registerViewModel.password)
-            .textFieldStyle(RoundedBorderTextFieldStyle())
-            .autocapitalization(.none)
-            .keyboardType(.default)
-            .padding(.horizontal)
+            
+            
+            SecureField("Password", text: $registerViewModel.password)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .autocapitalization(.none)
+                .keyboardType(.default)
+                .padding(.horizontal)
+            
+            TextField("Name (optional)", text: $registerViewModel.name)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .autocapitalization(.none)
+                .keyboardType(.default)
+                .padding(.horizontal)
+            
+            TextField("Surname (optional)", text: $registerViewModel.surname)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .autocapitalization(.none)
+                .keyboardType(.default)
+                .padding(.horizontal)
             
             if let error = registerViewModel.registerError {
                     Text("Error: \(error)")
