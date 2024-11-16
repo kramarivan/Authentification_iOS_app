@@ -12,7 +12,10 @@ struct LoginView: View {
     @StateObject private var loginViewModel = LoginViewModel()
 
         var body: some View {
+            NavigationStack {
             VStack(spacing: 20) {
+                Spacer()
+                
                 TextField("Username", text: $loginViewModel.username)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .autocapitalization(.none)
@@ -41,8 +44,15 @@ struct LoginView: View {
                 .foregroundColor(.white)
                 .cornerRadius(8)
                 .padding(.horizontal)
+                
+                Spacer()
+
+                
+                NavigationLink(destination: RegisterView()) {
+                    Text("Don't have an account? Register here.")
+                    }
+                }.padding()
             }
-            .padding()
         }
     }
 
