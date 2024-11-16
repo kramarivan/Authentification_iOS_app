@@ -12,7 +12,7 @@ struct ContentView: View {
 
     var body: some View {
         if viewModel.isLoggedIn {
-            ProtectedView()
+            ProfileView()
                 .environmentObject(viewModel)
         } else {
             LoginView()

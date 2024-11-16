@@ -6,11 +6,16 @@
 //
 import SwiftUI
 import FirebaseAuth
+import FirebaseFirestore
 
 class RegisterViewModel: ObservableObject {
     @Published var username: String = ""
     @Published var password: String = ""
+    @Published var name: String = ""
+    @Published var surname: String = ""
     @Published var registerError: String?
+    
+    private let db = Firestore.firestore()
     
     func register(completion: @escaping (Bool) -> Void) {
         guard !username.isEmpty, !password.isEmpty else {
@@ -19,19 +24,38 @@ class RegisterViewModel: ObservableObject {
             return
         }
         
-        Auth.auth().createUser(withEmail: username, password: password) { [weak self] _, error in
-            DispatchQueue.main.async {
-                if let error = error {
-                    // If authentication fails, update the error message and notify failure
+        // Create user with email and password
+        Auth.auth().createUser(withEmail: username, password: password) { [weak self] authResult, error in
+            if let error = error {
+                DispatchQueue.main.async {
                     self?.registerError = error.localizedDescription
                     completion(false)
-                } else {
-                    // If successful, clear any error message and notify success
-                    self?.registerError = nil
-                    completion(true)
+                }
+                return
+            }
+            
+            // Store additional user data in Firestore
+            if let user = authResult?.user {
+                let userData: [String: Any] = [
+                    "name": self?.name ?? "",
+                    "surname": self?.surname ?? "",
+                    "email": self?.username ?? "",
+                    "createdAt": FieldValue.serverTimestamp()
+                ]
+                
+                self?.db.collection("users").document(user.uid).setData(userData) { error in
+                    DispatchQueue.main.async {
+                        if let error = error {
+                            self?.registerError = error.localizedDescription
+                            completion(false)
+                        } else {
+                            self?.registerError = nil
+                            completion(true)
+                        }
+                        
+                    }
                 }
             }
         }
-        
     }
 }
