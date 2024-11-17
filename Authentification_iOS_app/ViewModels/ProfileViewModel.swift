@@ -12,9 +12,12 @@ import FirebaseFirestore
 
 class ProfileViewModel: ObservableObject {
     @Published var userEmail: String = ""
-    @Published var deleteError: String?
+    @Published var errorMessage: String?
     @Published var name: String = ""
     @Published var surname: String = ""
+    @Published var tempName: String = ""
+    @Published var tempSurname: String = ""
+    @Published var isEditing: Bool = false
     
     private let db = Firestore.firestore()
     
@@ -23,7 +26,7 @@ class ProfileViewModel: ObservableObject {
     }
 
     /// Fetches the currently logged-in user's email.
-    private func fetchUserData() {
+    func fetchUserData() {
         guard let user = Auth.auth().currentUser else { return }
         
         // Fetch user email from FirebaseAuth
@@ -42,20 +45,53 @@ class ProfileViewModel: ObservableObject {
     
     func deleteAccount(completion: @escaping (Bool) -> Void) {
             guard let user = Auth.auth().currentUser else {
-                deleteError = "No user is logged in."
+                errorMessage = "No user is logged in."
                 completion(false)
                 return
             }
+        
+        // Get a reference to the Firestore document
+            let userDocRef = db.collection("users").document(user.uid)
+            
+            // Delete the Firestore document first
+            userDocRef.delete { [weak self] error in
+                if let error = error {
+                    DispatchQueue.main.async {
+                        self?.errorMessage = "Failed to delete user data: \(error.localizedDescription)"
+                        completion(false)
+                    }
+                    return
+                }
 
             user.delete { [weak self] error in
                 DispatchQueue.main.async {
                     if let error = error {
-                        self?.deleteError = error.localizedDescription
+                        self?.errorMessage = error.localizedDescription
                         completion(false)
                     } else {
-                        self?.deleteError = nil
+                        self?.errorMessage = nil
                         completion(true)
                     }
+                }
+            }
+        }
+    }
+    
+    func saveProfileData(completion: @escaping (Bool) -> Void) {
+            guard let userId = Auth.auth().currentUser?.uid else {
+                completion(false)
+                return
+            }
+
+            db.collection("users").document(userId).setData([
+                "name": name,
+                "surname": surname
+            ], merge: true) { error in
+                if let error = error {
+                    self.errorMessage = error.localizedDescription
+                    completion(false)
+                } else {
+                    completion(true)
                 }
             }
         }
