@@ -18,16 +18,16 @@ struct ProfileView: View {
                 .font(.largeTitle)
                 .padding()
             
-            Text("Email: \(viewModel.userEmail)")
+            Text("Email: \(viewModel.user.email)")
             if viewModel.isEditing {
-                TextField("Name", text: $viewModel.tempName)
+                TextField("Name", text: $viewModel.user.tempName)
                     .padding(.horizontal)
                 
-                TextField("Surname", text: $viewModel.tempSurname)
+                TextField("Surname", text: $viewModel.user.tempSurname)
                     .padding(.horizontal)
             } else {
-                Text("Name: \(viewModel.name)")
-                Text("Surname: \(viewModel.surname)")
+                Text("Name: \(viewModel.user.name)")
+                Text("Surname: \(viewModel.user.surname)")
             }
             
             
@@ -35,8 +35,8 @@ struct ProfileView: View {
                 if viewModel.isEditing {
                     // Save Button
                     Button("Save") {
-                        viewModel.name = viewModel.tempName
-                        viewModel.surname = viewModel.tempSurname
+                        viewModel.user.name = viewModel.user.tempName
+                        viewModel.user.surname = viewModel.user.tempSurname
                         viewModel.saveProfileData { success in
                             if success {
                                 viewModel.isEditing = false
@@ -55,8 +55,8 @@ struct ProfileView: View {
                 } else {
                     // Edit Button
                     Button("Edit") {
-                        viewModel.tempName = viewModel.name
-                        viewModel.tempSurname = viewModel.surname
+                        viewModel.user.tempName = viewModel.user.name
+                        viewModel.user.tempSurname = viewModel.user.surname
                         viewModel.isEditing = true
                     }
                     .padding()

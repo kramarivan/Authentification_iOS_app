@@ -11,12 +11,8 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class ProfileViewModel: ObservableObject {
-    @Published var userEmail: String = ""
+    @Published var user = User()
     @Published var errorMessage: String?
-    @Published var name: String = ""
-    @Published var surname: String = ""
-    @Published var tempName: String = ""
-    @Published var tempSurname: String = ""
     @Published var isEditing: Bool = false
     
     private let db = Firestore.firestore()
@@ -27,31 +23,31 @@ class ProfileViewModel: ObservableObject {
 
     /// Fetches the currently logged-in user's email.
     func fetchUserData() {
-        guard let user = Auth.auth().currentUser else { return }
+        guard let FBuser = Auth.auth().currentUser else { return }
         
         // Fetch user email from FirebaseAuth
-        userEmail = user.email ?? "No email found"
+        user.email = FBuser.email ?? "No email found"
         
         // Fetch additional user data from Firestore
-        let docRef = db.collection("users").document(user.uid)
+        let docRef = db.collection("users").document(FBuser.uid)
         docRef.getDocument { [weak self] document, error in
             if let document = document, document.exists {
                 let data = document.data()
-                self?.name = data?["name"] as? String ?? "No name"
-                self?.surname = data?["surname"] as? String ?? "No surname"
+                self?.user.name = data?["name"] as? String ?? "No name"
+                self?.user.surname = data?["surname"] as? String ?? "No surname"
             }
         }
     }
     
     func deleteAccount(completion: @escaping (Bool) -> Void) {
-            guard let user = Auth.auth().currentUser else {
+            guard let FBuser = Auth.auth().currentUser else {
                 errorMessage = "No user is logged in."
                 completion(false)
                 return
             }
         
         // Get a reference to the Firestore document
-            let userDocRef = db.collection("users").document(user.uid)
+            let userDocRef = db.collection("users").document(FBuser.uid)
             
             // Delete the Firestore document first
             userDocRef.delete { [weak self] error in
@@ -63,7 +59,7 @@ class ProfileViewModel: ObservableObject {
                     return
                 }
 
-            user.delete { [weak self] error in
+            FBuser.delete { [weak self] error in
                 DispatchQueue.main.async {
                     if let error = error {
                         self?.errorMessage = error.localizedDescription
@@ -84,8 +80,8 @@ class ProfileViewModel: ObservableObject {
             }
 
             db.collection("users").document(userId).setData([
-                "name": name,
-                "surname": surname
+                "name": user.name,
+                "surname": user.surname
             ], merge: true) { error in
                 if let error = error {
                     self.errorMessage = error.localizedDescription

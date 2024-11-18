@@ -11,10 +11,7 @@ import FirebaseAuth
 
 /// A ViewModel to handle login functionality and manage related state
 class LoginViewModel: ObservableObject {
-    // User-provided email/username
-    @Published var username = ""
-    // User-provided password
-    @Published var password = ""
+    @Published var user = User()
     // Error message to display in case of login failure
     @Published var loginError: String?
 
@@ -22,14 +19,14 @@ class LoginViewModel: ObservableObject {
     /// - Parameter completion: A closure that returns `true` if login is successful, or `false` otherwise.
     func loginUser(completion: @escaping (Bool) -> Void) {
         // Ensure both username and password are not empty
-        guard !username.isEmpty, !password.isEmpty else {
+        guard !user.email.isEmpty, !user.password.isEmpty else {
             loginError = "Username and password cannot be empty."
             completion(false)
             return
         }
 
         // Attempt to authenticate with Firebase using email and password
-        Auth.auth().signIn(withEmail: username, password: password) { [weak self] _, error in
+        Auth.auth().signIn(withEmail: user.email, password: user.password) { [weak self] _, error in
             // Ensure UI updates happen on the main thread
             DispatchQueue.main.async {
                 if let error = error {

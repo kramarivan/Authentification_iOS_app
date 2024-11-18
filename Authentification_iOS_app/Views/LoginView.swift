@@ -16,12 +16,12 @@ struct LoginView: View {
             VStack(spacing: 20) {
                 Spacer()
                 
-                TextField("Email", text: $loginViewModel.username)
+                TextField("Email", text: $loginViewModel.user.email)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .autocapitalization(.none)
                     .padding(.horizontal)
 
-                SecureField("Password", text: $loginViewModel.password)
+                SecureField("Password", text: $loginViewModel.user.password)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal)
 

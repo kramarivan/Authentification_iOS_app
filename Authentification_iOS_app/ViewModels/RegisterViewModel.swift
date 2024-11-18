@@ -9,23 +9,20 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class RegisterViewModel: ObservableObject {
-    @Published var username: String = ""
-    @Published var password: String = ""
-    @Published var name: String = ""
-    @Published var surname: String = ""
+    @Published var user = User()
     @Published var registerError: String?
     
     private let db = Firestore.firestore()
     
     func register(completion: @escaping (Bool) -> Void) {
-        guard !username.isEmpty, !password.isEmpty else {
+        guard !user.email.isEmpty, !user.password.isEmpty else {
             registerError = "Username and password cannot be empty."
             completion(false)
             return
         }
         
         // Create user with email and password
-        Auth.auth().createUser(withEmail: username, password: password) { [weak self] authResult, error in
+        Auth.auth().createUser(withEmail: user.email, password: user.password) { [weak self] authResult, error in
             if let error = error {
                 DispatchQueue.main.async {
                     self?.registerError = error.localizedDescription
@@ -37,9 +34,9 @@ class RegisterViewModel: ObservableObject {
             // Store additional user data in Firestore
             if let user = authResult?.user {
                 let userData: [String: Any] = [
-                    "name": self?.name ?? "",
-                    "surname": self?.surname ?? "",
-                    "email": self?.username ?? "",
+                    "name": self?.user.name ?? "",
+                    "surname": self?.user.surname ?? "",
+                    "email": self?.user.email ?? "",
                     "createdAt": FieldValue.serverTimestamp()
                 ]
                 

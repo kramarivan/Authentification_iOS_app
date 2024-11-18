@@ -12,26 +12,26 @@ struct RegisterView: View {
     
     var body: some View {
         VStack(spacing: 20){
-            TextField("Email", text: $registerViewModel.username)
+            TextField("Email", text: $registerViewModel.user.email)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .autocapitalization(.none)
                 .keyboardType(.emailAddress)
                 .padding(.horizontal)
             
             
-            SecureField("Password", text: $registerViewModel.password)
+            SecureField("Password", text: $registerViewModel.user.password)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .autocapitalization(.none)
                 .keyboardType(.default)
                 .padding(.horizontal)
             
-            TextField("Name (optional)", text: $registerViewModel.name)
+            TextField("Name (optional)", text: $registerViewModel.user.name)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .autocapitalization(.none)
                 .keyboardType(.default)
                 .padding(.horizontal)
             
-            TextField("Surname (optional)", text: $registerViewModel.surname)
+            TextField("Surname (optional)", text: $registerViewModel.user.surname)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .autocapitalization(.none)
                 .keyboardType(.default)
